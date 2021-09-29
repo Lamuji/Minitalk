@@ -6,7 +6,7 @@
 /*   By: rfkaier <rfkaier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/02 16:24:54 by hkrifa            #+#    #+#             */
-/*   Updated: 2021/09/20 16:36:04 by rfkaier          ###   ########.fr       */
+/*   Updated: 2021/09/29 16:32:37 by rfkaier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include "../minitalk.h"
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-size_t	ft_strlen( const char *str);
+size_t	ft_strlen(const char *str);
 int		ft_isalpha( int chr );
 int		ft_isdigit(int chr);
 int		ft_isalnum(int chr);
@@ -34,15 +36,15 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 int		ft_atoi(const char *nptr);
-void	*ft_memset (void *s, int c, size_t n);
+void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-int		ft_memcmp( const void *pter1, const void *pter2, size_t size );
-void	*ft_calloc (size_t num, size_t size);
+int		ft_memcmp(const void *pter1, const void *pter2, size_t size );
+void	*ft_calloc(size_t num, size_t size);
 char	*ft_strdup( const char *source );
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
